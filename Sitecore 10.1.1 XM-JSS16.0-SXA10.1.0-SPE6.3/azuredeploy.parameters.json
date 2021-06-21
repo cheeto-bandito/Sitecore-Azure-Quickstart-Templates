@@ -1,0 +1,72 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deploymentId": {
+      "value": ""
+    },
+    "sqlServerLogin": {
+      "value": ""
+    },
+    "sqlServerPassword": {
+      "value": ""
+    },
+    "siMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore.IdentityServer.5.1.1-r00292.scwdp.zip"
+    },
+    "cmMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore 10.1.1 rev. 005862 (XM) (Cloud)_cm.scwdp.zip"
+    },
+    "cdMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore 10.1.1 rev. 005862 (XM) (Cloud)_cd.scwdp.zip"
+    },
+    "sitecoreAdminPassword": {
+      "value": ""
+    },
+    "licenseXml": {
+      "value": ""
+    },
+    "authCertificateBlob":{
+      "value": ""
+	},
+    "authCertificatePassword":{
+      "value": ""
+    },
+	"solrConnectionString":{
+	  "value": ""
+	},
+	"sitecoreSKU": {
+      "value": ""
+    },
+	"modules": {
+		"value": {
+			"items": [
+			{
+				"name": "jss",
+				"templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/JSS/xm/azuredeploy.json",
+				"parameters":
+				{
+					"jssMsDeployPackageUrl": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore Headless Services Server for Sitecore 10.1.0 XM 16.0.0 rev. 210223.scwdp.zip",
+					"jssCDMsDeployPackageUrl": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore Headless Services Server for Sitecore 10.1.0 XM 16.0.0 rev. 210223 CD.scwdp.zip"
+				}
+			},
+			{
+				"name": "sxa",
+				"templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/SXA%2010.1.0/xm/azuredeploy.json",
+				"parameters": {
+					"cdSxaMsDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore Experience Accelerator XM 10.1.0.3751 CD.scwdp.zip",
+					"cmSxaMsDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore Experience Accelerator XM 10.1.0.3751.scwdp.zip",
+					"speMsDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore.PowerShell.Extensions-6.3.scwdp.zip",
+				}
+			},
+			{
+				"name": "bootloader",
+				"templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%2010.1.1/XM/addons/bootloader.json",
+				"parameters": {
+					"msDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore.Cloud.Integration.Bootload.wdp.zip"
+				}
+			}]
+		}
+	}
+  }
+}
