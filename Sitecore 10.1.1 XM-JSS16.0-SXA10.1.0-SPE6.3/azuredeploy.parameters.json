@@ -43,7 +43,7 @@
 			"items": [
 			{
 				"name": "jss",
-				"templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/JSS/xm/azuredeploy.json",
+				"templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/JSS%2016.0.0/xm/azuredeploy.json",
 				"parameters":
 				{
 					"jssMsDeployPackageUrl": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore Headless Services Server for Sitecore 10.1.0 XM 16.0.0 rev. 210223.scwdp.zip",

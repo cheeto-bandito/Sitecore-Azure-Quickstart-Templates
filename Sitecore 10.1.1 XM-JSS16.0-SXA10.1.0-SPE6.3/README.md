@@ -4,6 +4,8 @@ Visualize:
 [Infrastructure](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FSitecore%2Fsitecore-azure-quickstart-templates%2Fmaster%2FSitecore%209.0.0%2Fxm%2Fnested%2Finfrastructure.json),
 [Application deployment](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FSitecore%2Fsitecore-azure-quickstart-templates%2Fmaster%2FSitecore%209.0.0%2Fxm%2Fnested%2Fapplication.json)
 
+###[Walkthrough](https://doc.sitecore.com/developers/101/sitecore-experience-manager/en/walkthrough--deploying-a-new-sitecore-environment-to-the-microsoft-azure-app-service.html)
+
 
 This template creates a Sitecore XM Environment with all resources necessary to run Sitecore.
 
@@ -14,7 +16,8 @@ Resources provisioned:
   * Sitecore roles: Content Delivery, Content Management
 	  * Hosting plans: one per role
 	  * Preconfigured Web Applications, based on the provided WebDeploy packages
-  * Azure Search Service
+  * Sitecore modules: Headless Services 16.0, SXA 10.1.0, Powershell Extensions 6.3
+  * Solr on SearchStax
   * (optional) Application Insights for diagnostics and monitoring
 
 
