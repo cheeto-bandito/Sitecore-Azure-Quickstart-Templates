@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deploymentId": {
+      "value": ""
+    },
+    "location": {
+      "value": ""
+    },
+    "sitecoreAdminPassword": {
+      "value": ""
+    },
+    "licenseXml": {
+      "value": ""
+    },
+    "sqlServerLogin": {
+      "value": ""
+    },
+    "sqlServerPassword": {
+      "value": ""
+    },
+    "siMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/9-3-0/Sitecore.IdentityServer.4.0.0-r00257.scwdp.zip"
+    },
+    "singleMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/9-3-0/Sitecore 9.3.0 rev. 003498 (Cloud)_single.scwdp.zip"
+    },
+    "xcSingleMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/9-3-0/Sitecore 9.3.0 rev. 003498 (Cloud)_xp0xconnectsolr.scwdp.zip"
+    },
+    "authCertificateBlob": {
+      "value": ""
+	},
+    "authCertificatePassword": {
+      "value": ""
+    },
+    "machineLearningServerConnectionString": {
+      "value": ""
+    },
+    "machineLearningServerBlobEndpointCertificatePath": {
+      "value": ""
+    },
+    "machineLearningServerBlobEndpointCertificatePassword": {
+      "value": ""
+    },
+    "machineLearningServerTableEndpointCertificatePath": {
+      "value": ""
+    },
+    "machineLearningServerTableEndpointCertificatePassword": {
+      "value": ""
+    },
+    "machineLearningServerEndpointCertificationAuthorityCertificatePath": {
+      "value": ""
+    },
+	"allowInvalidClientCertificates": {
+      "value": true
+    },
+    "solrConnectionString": {
+      "value": ""
+    },
+	"modules": {
+		"value": {
+			"items": [
+			{
+				"name": "spe",
+				"templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/SPE6.3/XPSingle/azuredeploy.json",
+				"parameters": {
+					"speMsDeployPackageUrl": "https://sitecorerepo.blob.core.windows.net/spe6-3/Sitecore.PowerShell.Extensions-6.3.scwdp.zip"
+				}
+			},
+			{
+				"name": "elision",
+				"templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/Elision%209.3.0/XPSingle/azuredeploy.json",
+				"parameters": {
+					"elisionMsDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/9-3-0/Elision.9.3.0.scwdp.zip"
+				}
+			},
+			{
+				"name": "bootloader",
+				"templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%209.3.0/XPSingle/addons/bootloader.json",
+				"parameters": {
+					"msDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/9-3-0/Sitecore.Cloud.Integration.Bootload.wdp.zip"
+				}
+			}]
+		}
+	}
+  }
+}
