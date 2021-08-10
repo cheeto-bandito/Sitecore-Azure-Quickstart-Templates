@@ -20,7 +20,7 @@ In order to configure Sitecore deployment parameters to include DEG Elision:
 ```JSON
   {
     "name": "elision",
-    "templateLink": "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/JSS/xp0/azuredeploy.json",
+    "templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/Elision%209.3.0/XPSingle/azuredeploy.json",
     "parameters":
     {
       "elisionMsDeployPackageUrl": "<URL of the WDP file for DEG Elision *.scwdp>"

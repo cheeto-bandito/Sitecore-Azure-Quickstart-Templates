@@ -20,7 +20,7 @@ In order to configure Sitecore deployment parameters to include Sitecore Powersh
 ```JSON
   {
     "name": "spe",
-    "templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/SPE6.3/xp/azuredeploy.json",
+    "templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/SPE6.3/XPSingle/azuredeploy.json",
     "parameters":
     {
       "speMsDeployPackageUrl": "<URL of the WDP file for Sitecore Powershell Extensions *.scwdp>"
