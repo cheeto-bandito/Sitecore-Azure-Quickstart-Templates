@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "deploymentId": {
+      "value": ""
+    },
+    "sitecoreAdminPassword": {
+      "value": ""
+    },
+    "licenseXml": {
+      "value": ""
+    },
+    "sqlServerLogin": {
+      "value": ""
+    },
+    "sqlServerPassword": {
+      "value": ""
+    },
+    "siMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore.IdentityServer.5.1.1-r00292.scwdp.zip"
+    },
+    "singleMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore 10.1.1 rev. 005862 (Cloud)_single.scwdp.zip"
+    },
+    "xcSingleMsDeployPackageUrl": {
+      "value": "https://sitecorerepo.blob.core.windows.net/10-1-1/Sitecore 10.1.1 rev. 005862 (Cloud)_xp0xconnectsolr.scwdp.zip"
+    },
+    "authCertificateBlob": {
+      "value": ""
+    },
+    "authCertificatePassword": {
+      "value": ""
+    },
+	  "allowInvalidClientCertificates": {
+      "value": true
+    },
+	  "solrConnectionString": {
+	    "value": ""
+	  },
+    "modules": {
+      "value": {
+        "items": [
+        {
+          "name": "spe",
+          "templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/SPE6.3/XPSingle/azuredeploy.json",
+          "parameters": {
+            "speMsDeployPackageUrl": "https://sitecorerepo.blob.core.windows.net/spe6-3/Sitecore.PowerShell.Extensions-6.3.scwdp.zip"
+          }
+        },
+        {
+          "name": "elision",
+          "templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/Elision%2010.1.1/XPSingle/azuredeploy.json",
+          "parameters": {
+            "elisionMsDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/10-1-1/Elision.10.1.1.scwdp.zip"
+          }
+        },
+        {
+          "name": "bootloader",
+          "templateLink": "https://raw.githubusercontent.com/cheeto-bandito/Sitecore-Azure-Quickstart-Templates/master/Sitecore%2010.1.1/XPSingle/addons/bootloader.json",
+          "parameters": {
+            "msDeployPackageUrl" : "https://sitecorerepo.blob.core.windows.net/9-3-0/Sitecore.Cloud.Integration.Bootload.wdp.zip"
+          }
+        }]
+      }
+    }
+  }
+}
